@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thêm node trước phần tử</title>
+</head>
+<body>
+
+  <div id="container">
+    <p id="p1">the first paragraph</p>
+    <p id="p2">the second paragraph</p>
+  </div>
+
+  <button onclick="addnode()">Add Node</button>
+
+  <script>
+    function addnode() {
+      var x = document.createElement('p');
+      x.className = "p3";
+      x.innerText = "the new one";
+
+      var cha = document.getElementById('container');
+      var y = document.getElementById('p2');
+
+      // Chèn thẻ <p> mới (x) vào trước phần tử p2 (y)
+      cha.insertBefore(x, y);
+    }
+  </script>
+
+</body>
+</html>
